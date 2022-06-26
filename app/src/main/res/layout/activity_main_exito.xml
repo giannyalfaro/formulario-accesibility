@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivityExito">
+
+    <ImageView
+        android:id="@+id/ivSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvSuccess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_check_7050"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:importantForAccessibility="no"/>
+
+    <TextView
+        android:id="@+id/tvSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ÉXITO"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/black"
+        android:textSize="24dp"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvSuccessDescription"
+        app:layout_constraintTop_toBottomOf="@+id/ivSuccess"/>
+
+    <TextView
+        android:id="@+id/tvSuccessDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="El formulario se envió exitosamente"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/black"
+        android:textSize="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccess"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Entendido"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccessDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

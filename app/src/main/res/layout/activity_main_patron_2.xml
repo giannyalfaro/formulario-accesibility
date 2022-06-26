@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivityPatron2">
+
+    <TextView
+        android:id="@+id/txtViewGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El formulario tiene 3 errores"
+        android:textSize="24dp"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="24dp"
+        android:labelFor="@+id/edit_text"
+        app:layout_constraintBottom_toTopOf="@+id/edtViewName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewGeneral"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewApellido"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtViewApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Apellido"
+        android:textSize="24dp"
+        android:labelFor="@+id/edit_text1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtViewApellido"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtViewName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtViewApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewMascota"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewApellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtViewMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nombre de tu mascota"
+        android:textSize="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:labelFor="@+id/edit_text2"
+        app:layout_constraintBottom_toTopOf="@+id/edtViewMascota"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtViewApellido" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtViewMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewMascota">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:text="enviar"
+        android:clickable="true"
+        android:onClick="sendData"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtViewMascota"
+        android:focusable="true"
+        tools:ignore="OnClick">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
